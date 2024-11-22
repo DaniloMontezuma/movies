@@ -23,7 +23,7 @@ public class MovieController {
         return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
     }
 
-    @GetMapping("/{imdbId}") // Cambiado para usar imdbId
+    @GetMapping("/{imdbId}")
     public ResponseEntity<Movie> getSingleMovie(@PathVariable String imdbId) {
         Optional<Movie> movie = movieService.singleMovie(imdbId);
 
